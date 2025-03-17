@@ -59,3 +59,20 @@ Used to **integrate non-compatible systems** into the smart home architecture.
 
 ## 🚀 How to Run
 1. Compile and run the **`Demo.java`** file.
+Explanation (of patterns used): 
+First of all, we are using Abstract factory patterns to create advancedFactory,basicFactory then by this two factories we are initializing devices
+like:
+Device basicLight = basicFactory.createLight("BasicLight1");
+        Device advancedLight = advancedFactory.createLight("AdvancedLight1");
+        Device basicThermostat = basicFactory.createThermostat("BasicThermostat1");
+...
+2) By composite pattern we represented room "living room" and by creating object of "devicegroup" 
+3) Decorate a basic light with scheduling functionality.
+4) Using Adapter Pattern
+ Integrate a legacy door lock system.
+        LegacyDoorLock legacyLock = new LegacyDoorLock();
+
+        
+5) Using Facade Pattern
+Create a facade controller to simplify control over the system.
+        SmartHomeController controller = new SmartHomeController();
